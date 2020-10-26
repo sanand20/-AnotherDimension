@@ -42,6 +42,16 @@ public class ArrayOps {
       }
       return ans;
     }
+    public static boolean isRowMagic(int[][] arr){
+      boolean ans = true;
+      int [] ar= sumRows(arr);
+      for (int i=0; i<ar.length-1; i++){
+        if (ar[i]!=ar[i+1]){
+          ans=false;
+        }
+      }
+      return ans;
+    }
     public static boolean isColMagic(int[][] arr){
       boolean ans = true;
       int [] ar= sumCols(arr);
@@ -52,4 +62,16 @@ public class ArrayOps {
       }
       return ans;
     }
+    public static boolean isLocationMagic(int[][] matrix, int row, int col){
+      int [] arr = matrix[0];
+      int [] colarr = new int [arr.length];
+      for (int j = 0; j<matrix.length; j++){
+        colarr[j]= matrix[j][col];
+      }
+      int rowsum = sum(matrix[row]);
+      int colsum = sum(colarr);
+    
+      return rowsum==colsum;
+
+  }
 }
