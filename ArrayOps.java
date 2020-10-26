@@ -42,6 +42,14 @@ public class ArrayOps {
       }
       return ans;
     }
-    //public static boolean isRowMagic(int[][] arr){
-
+    public static boolean isColMagic(int[][] arr){
+      boolean ans = true;
+      int [] ar= sumCols(arr);
+      for (int i=0; i<ar.length-1; i++){
+        if (ar[i]!=ar[i+1]){
+          ans=false;
+        }
+      }
+      return ans;
+    }
 }
