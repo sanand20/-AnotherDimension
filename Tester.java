@@ -8,6 +8,11 @@ public class Tester{
 
 
     System.out.println(ArrayOps.sum(arrays[0]));
+    System.out.println(ArrayOps.sum(arrays[1]));
+    System.out.println(ArrayOps.sum(arrays[2]));
+    System.out.println(ArrayOps.largest(arrays[0]));
+    System.out.println(ArrayOps.largest(arrays[1]));
+    System.out.println(ArrayOps.largest(arrays[2]));
 
   }
 }
